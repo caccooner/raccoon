@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AppStoreService/.idea/AppStoreService.iml" filepath="$PROJECT_DIR$/../AppStoreService/.idea/AppStoreService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LinkedinApi/.idea/LinkedinApi.iml" filepath="$PROJECT_DIR$/../LinkedinApi/.idea/LinkedinApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/raccoon.iml" filepath="$PROJECT_DIR$/.idea/raccoon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../thrft/.idea/thrft.iml" filepath="$PROJECT_DIR$/../thrft/.idea/thrft.iml" />
+    </modules>
+  </component>
+</project>
+
