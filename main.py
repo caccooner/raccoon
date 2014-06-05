@@ -7,7 +7,7 @@ import logging
 import datetime
 import time
 import os
-from raccoon.base_handler import MainHandler
+from raccoon.base_handler import PageHandler
 from raccoon.handlers.search_handler import SearchHandler
 
 class RaccoonApplication(tornado.web.Application):
@@ -23,9 +23,11 @@ class RaccoonApplication(tornado.web.Application):
         }
 
         handlers = [
-            ('/',MainHandler),
+            ('/',PageHandler,{'page':'index.html'}),
+             ('/portal',PageHandler,{'page':'portal.html'}),
             ('/search',SearchHandler),
-            ('/static/*',tornado.web.StaticFileHandler)
+            ('/static/*',tornado.web.StaticFileHandler),
+
         ]
 
 

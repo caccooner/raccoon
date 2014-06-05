@@ -17,6 +17,26 @@ body {
     font-weight: 400;
     color: #555;
     text-align: left;
+    margin: 0px;
+}
+#raccoon .stripe{
+    padding:20px 0px;
+}
+
+#raccoon .masthead{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 48px;
+    padding: 10px 0px;
+    margin-bottom: 0px;
+}
+
+#raccoon .launch.button {
+position: fixed;
+top: 63px;
+z-index: 500;
+width: 70px;
 }
 
 strong { font-weight: 700; }

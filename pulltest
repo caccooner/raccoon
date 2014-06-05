@@ -1,2 +1,7 @@
 pull test
+<<<<<<< HEAD
 local change
+=======
+
+remote change
+>>>>>>> origin/master

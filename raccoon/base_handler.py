@@ -25,7 +25,9 @@ class BaseHttpHandler(RequestHandler):
 
 
 
-class MainHandler(RequestHandler):
+class PageHandler(RequestHandler):
+    def initialize(self,page):
+        self._page = page
     def get(self, *args, **kwargs):
         self.handle()
 
@@ -33,4 +35,6 @@ class MainHandler(RequestHandler):
         self.handle()
 
     def handle(self):
-        self.render('index.html')
+        self.render(self._page)
+
+
