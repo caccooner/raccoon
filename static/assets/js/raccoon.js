@@ -17,7 +17,7 @@ raccoon.ready = function(){
         snsBind : function(){
             console.log($(this).attr('data-bind-sns'))
             url = $(this).attr('data-bind-sns');
-            result = window.open(url)
+            result = window.open(url,'_blank')
         }
     }
 
