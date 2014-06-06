@@ -2,21 +2,6 @@ import urllib
 import urllib2
 import json
 
-        
-OathConfig={
-    'linkedin':{
-        'util':LinkedinUtil,
-        'client_id':'75d6qv93etmv1u',
-        'client_secret':'QbNYhFLTikbD0k3x',
-        'redirect_url':'http://www.mi.com/',
-        'auth_code_url':'https://www.linkedin.com/uas/oauth2/authorization',
-        'auth_token_url':'https://www.linkedin.com/uas/oauth2/accessToken',
-        'scope':'r_fullprofile r_contactinfo r_emailaddress',
-        'state':'DCEEFWF45453sdffef424',
-    },
-
-
-}
 
 class OauthHandler():
     def __init__(self):
@@ -26,6 +11,8 @@ class OauthHandler():
             
     def get_oauth_handler(self, key):
         return self.cache.get(key)
+
+       
 
 class LinkedinUtil(object):
     _type = 'linkedin'
@@ -58,4 +45,19 @@ class LinkedinUtil(object):
     
     
 
+
+OathConfig={
+    'linkedin':{
+        'util':LinkedinUtil,
+        'client_id':'75d6qv93etmv1u',
+        'client_secret':'QbNYhFLTikbD0k3x',
+        'redirect_url':'http://www.mi.com/',
+        'auth_code_url':'https://www.linkedin.com/uas/oauth2/authorization',
+        'auth_token_url':'https://www.linkedin.com/uas/oauth2/accessToken',
+        'scope':'r_fullprofile r_contactinfo r_emailaddress',
+        'state':'DCEEFWF45453sdffef424',
+    },
+
+
+}
 
