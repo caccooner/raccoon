@@ -39,6 +39,10 @@ z-index: 500;
 width: 70px;
 }
 
+#raccoon .p_tags{
+    position: relative;
+    margin:20px 0px 0px;
+}
 strong { font-weight: 700; }
 a:hover { text-decoration: none; }
 

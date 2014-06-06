@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 import tornado.httpserver
 import tornado.ioloop
-import tornado.options
 import tornado.web
-import logging
 import datetime
-import time
 import os
 from raccoon.base_handler import PageHandler
+from raccoon.handlers.bind_handler import BindHandler
+from raccoon.handlers.bind_handler import BindCallbackHandler
 from raccoon.handlers.search_handler import SearchHandler
 
 class RaccoonApplication(tornado.web.Application):
@@ -24,18 +23,14 @@ class RaccoonApplication(tornado.web.Application):
 
         handlers = [
             ('/',PageHandler,{'page':'index.html'}),
-             ('/portal',PageHandler,{'page':'portal.html'}),
+            ('/portal',PageHandler,{'page':'portal.html'}),
             ('/search',SearchHandler),
             ('/static/*',tornado.web.StaticFileHandler),
-
+            ('/bind/(\w*)',BindHandler),
+            ('/bind/callback/(\w*)',BindCallbackHandler)
         ]
 
-
-
         tornado.web.Application.__init__(self, handlers, **setting)
-
-
-
 
 
 def main():

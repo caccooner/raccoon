@@ -50,6 +50,9 @@ a.tumblr { background: url(../img/social-icons/tumblr-gray.png); }
 a.aim { background: url(../img/social-icons/aim-gray.png); }
 a.google { background: url(../img/social-icons/google-gray.png); }
 
+i.liepin {
+    background: url(../img/social-icons/liepin.png) no-repeat;
+}
 
 a.twitter:hover { background: url(../img/social-icons/twitter.png); }
 a.dribbble:hover { background: url(../img/social-icons/dribbble.png); }
