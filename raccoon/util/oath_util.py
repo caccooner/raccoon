@@ -43,9 +43,40 @@ class LinkedinUtil(object):
         resp = urllib2.urlopen(url)
         return resp.read()
     
+    def get_connections(self,token):
+        url = 'http://api.linkedin.com/v1/people/~/connections'+self._field_select+'?oauth2_access_token='+token
+        resp = urllib2.urlopen(url)
+        return resp.read()
+
+class SinaWeiboUtil():
+    _type = 'SinaWeibo'
+    def get_code_redirect_url(self):
+        pass
+    def get_token(self,handler,code):
+        pass
+    def get_base_profile(self,token):
+        pass
+    def search_people(self,token,keywords,**kwargs):
+        pass
+    def get_connections(self,token):
+        pass
     
-
-
+class LiepingUtil():
+    _type = 'SinaWeibo'
+    _auth = 'direct'
+    def get_code_redirect_url(self):
+        pass
+    def get_token(self,handler,code):
+        pass
+    def get_base_profile(self,token):
+        pass
+    def search_people(self,token,keywords,**kwargs):
+        pass
+    def get_connections(self,token):
+        pass
+    
+    
+    
 OathConfig={
     'linkedin':{
         'util':LinkedinUtil,
@@ -57,7 +88,6 @@ OathConfig={
         'scope':'r_fullprofile r_contactinfo r_emailaddress',
         'state':'DCEEFWF45453sdffef424',
     },
-
 
 }
 

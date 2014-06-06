@@ -7,12 +7,16 @@ LOG = logging.getLogger(__name__)
 
 
 
-__OauthHanlderHold = OauthHandler()
+_OauthHanlderHold = OauthHandler()
 
-
+print 'definde'
 class BindHandler(RequestHandler):
     def get(self, bind_type):
-        self.redirect(__OauthHanlderHold.get_oauth_handler(bind_type).get_code_redirect_url())
+        handler = _OauthHanlderHold.get_oauth_handler(bind_type)
+        if hasattr(handler, '_auth'):
+            pass
+        else:
+            self.redirect(handler.get_code_redirect_url())
 
 
 
@@ -23,6 +27,6 @@ class BindCallbackHandler(RequestHandler):
             LOG.error(bind_type+': get None code ,retry!')
             self.redirect('/bind/'+bind_type)
         else:
-            token_info = __OauthHanlderHold.get_oauth_handler(bind_type).get_token(code)      
+            token_info = _OauthHanlderHold.get_oauth_handler(bind_type).get_token(code)      
 
 
